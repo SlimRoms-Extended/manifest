@@ -2,25 +2,13 @@
 <manifest>
 
   <remote  name="github"
-           fetch=".."
-           review="review.slimroms.org" />
-
-  <remote  name="private"
-           fetch="ssh://git@github.com" />
+           fetch="https://github.com" />
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
            revision="refs/tags/android-7.1.2_r36" />
 
-  <default revision="refs/heads/ng7.1"
-           remote="github"
-           sync-c="true"
-           sync-j="4" />
-
-  <project path="build" name="SlimRoms/android_build" groups="pdk,tradefed" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
   <project path="build/soong" name="platform/build/soong" groups="pdk,tradefed" remote="aosp" >
     <linkfile src="root.bp" dest="Android.bp" />
@@ -32,7 +20,6 @@
   <project path="developers/build" name="platform/developers/build" remote="aosp" />
   <project path="developers/demos" name="platform/developers/demos" remote="aosp" />
   <project path="developers/samples/android" name="platform/developers/samples/android" remote="aosp" />
-  <project path="development" name="platform/development" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="device/common" name="device/common" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" remote="aosp" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" remote="aosp" />
@@ -424,6 +411,11 @@
   <project path="tools/test/connectivity" name="platform/tools/test/connectivity" remote="aosp" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" remote="aosp" />
 
+ <!-- Track SlimRoms repos -->
  <include name="snippets/slim.xml" />
+ <!-- Track Extended repos -->
+ <include name="snippets/ext.xml" />
+ <!-- Track LineageOS repos -->
+ <include name="snippets/los.xml" />
 
 </manifest>

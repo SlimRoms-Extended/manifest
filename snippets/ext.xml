@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remote  name="ext"
+           fetch="https://github.com/SlimRoms-Extended"
+           revision="refs/heads/slim7" />
+
+ <!-- Extended -->
+ <project path="manifest" name="manifest" remote="ext" />
+  <project path="build" name="build_make" remote="ext" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="bionic" name="bionic" remote="ext" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="ext" />
+ <project path="development" name="development" remote="ext" />
+ <project path="external/apache-http" name="external_apache-http" remote="ext" />
+ <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="ext" />
+ <project path="frameworks/av" name="frameworks_av" remote="ext" />
+ <project path="frameworks/base" name="frameworks_base" remote="ext" />
+ <project path="frameworks/native" name="frameworks_native" remote="ext" />
+ <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="ext" />
+ <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="ext" />
+ <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="ext" />
+ <project path="packages/apps/ContactsCommon" name="packages_apps_ContactsCommon" remote="ext" />
+ <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="ext" />
+ <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="ext" />
+ <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="ext" />
+ <project path="packages/apps/MusicFX" name="packages_apps_MusicFX" remote="ext" />
+ <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="ext" />
+ <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" remote="ext" />
+ <project path="packages/apps/Settings" name="packages_apps_Settings" remote="ext" />
+ <project path="packages/apps/Snap" name="packages_apps_Snap" remote="ext" />
+ <project path="packages/apps/SnapdragonGallery" name="packages_apps_SnapdragonGallery" remote="ext" />
+ <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="ext" />
+ <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="ext" />
+ <project path="system/core" name="system_core" remote="ext" />
+ <project path="system/keymaster" name="system_keymaster" remote="ext" />
+ <project path="system/media" name="system_media" remote="ext" />
+ <project path="system/sepolicy" name="system_sepolicy" remote="ext" />
+ <project path="vendor/slim" name="vendor_slim" remote="ext" />
+
+</manifest>
